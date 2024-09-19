@@ -1,7 +1,3 @@
-Here’s a detailed roadmap to learn **Node.js** with subtopics and descriptions, providing you with a structured path for mastering the technology.
-
----
-
 ### **Node.js Topics Roadmap**
 
 1. **Introduction to Node.js**
@@ -144,9 +140,6 @@ Here’s a detailed roadmap to learn **Node.js** with subtopics and descriptions
    - An interactive platform with a free tier for learning the basics of Node.js through exercises.
 
 By following this roadmap and using the suggested free learning resources, you can develop a solid understanding of Node.js from the ground up.
-
----
-Here’s a list of the **most important and useful Node.js modules** along with usage examples to help you understand how to work with them effectively.
 
 ---
 
