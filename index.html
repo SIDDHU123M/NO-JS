@@ -7,100 +7,154 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Dank+Mono&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
 
-    .container {
-      max-width: 800px;
-      width: 90%;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px); /* Increased blur for the glass effect */
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
 
-    h1 {
-      margin-bottom: 20px;
-      font-size: 2.5rem;
-      color: #fff;
-      text-align: center;
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    }
+.output {
+  padding: 20px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Slightly more transparent border */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
 
-    .output {
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #222;
+}
 
-    pre {
-      background: rgba(244, 244, 249, 0.9);
-      padding: 15px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: 'Dank Mono', monospace;
-      font-size: 14px;
-      color: #333;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-      position: relative;
-    }
+p {
+  margin: 12px 0;
+  line-height: 1.8;
+}
 
-    .copy-button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #007bff;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-      transition: background 0.3s;
-    }
+pre {
+  background: #f4f4f9;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Dank Mono', monospace;
+  font-weight: bold;
+  font-size: 15px;
+  color: #444;
+  position: relative;
+  margin-bottom: 20px;
+}
 
-    .copy-button:hover {
-      background: #0056b3;
-    }
+code {
+  background: #f4f4f9;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: 'Dank Mono', monospace;
+  font-weight: bold;
+  font-size: 15px;
+  color: #444;
+}
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-    }
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+
+.copy-button:hover {
+  background: #0056b3;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  pre {
+    font-size: 13px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .copy-button {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>JavaScript Concepts</h1>
     <div class="output" id="htmlOutput"></div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
   <script>
+    // Function to fetch Markdown content from a file
     function fetchMarkdown(file) {
       fetch(file)
         .then(response => response.text())
         .then(markdown => {
-          const htmlOutput = marked.parse(markdown);
-          document.getElementById('htmlOutput').innerHTML = htmlOutput;
+          const htmlOutput = marked.parse(markdown); // Use marked.parse to convert markdown to HTML
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(htmlOutput, 'text/html');
+          doc.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((heading) => {
+            const id = heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').replace(/&/g, '-');
+            heading.id = id;
+          });
+          document.getElementById('htmlOutput').innerHTML = doc.body.innerHTML;
           document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightBlock(block);
             addCopyButton(block);
@@ -109,6 +163,7 @@
         .catch(error => console.error('Error fetching Markdown file:', error));
     }
 
+    // Function to add a copy button to each code block
     function addCopyButton(block) {
       const button = document.createElement('button');
       button.className = 'copy-button';
@@ -121,11 +176,13 @@
           }, 2000);
         });
       });
-      block.appendChild(button);
+      block.parentElement.style.position = 'relative';
+      block.parentElement.appendChild(button);
     }
 
+    // Fetch the Markdown content when the DOM is fully loaded
     document.addEventListener('DOMContentLoaded', function() {
-      fetchMarkdown('NOJS.md'); // Ensure the path to your Markdown file is correct
+      fetchMarkdown('NOJS.md'); // Replace with the path to your Markdown file
     });
   </script>
 </body>
