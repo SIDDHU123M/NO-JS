@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Dank+Mono&display=swap" rel="stylesheet">
   <style>
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 20px;
   background: url('background.jpg') no-repeat center center fixed;
@@ -17,78 +17,78 @@ body {
 }
 
 .container {
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(15px); /* Increased blur for the glass effect */
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.25); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px); /* Increased blur for a soft glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .output {
   padding: 20px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Blur effect */
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Slightly more transparent border */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5); /* Light background for better contrast */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Space between container and output */
 }
 
-
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 15px;
   color: #222;
+  font-weight: bold;
 }
 
 p {
   margin: 12px 0;
-  line-height: 1.8;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 pre {
-  background: #f4f4f9;
+  background: rgba(244, 244, 249, 0.8);
   padding: 15px;
   border-radius: 8px;
   overflow-x: auto;
   font-family: 'Dank Mono', monospace;
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: normal;
+  font-size: 14px;
   color: #444;
   position: relative;
   margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Light border for distinction */
 }
 
 code {
-  background: #f4f4f9;
+  background: rgba(244, 244, 249, 0.8);
   padding: 4px 8px;
   border-radius: 6px;
   font-family: 'Dank Mono', monospace;
-  font-weight: bold;
-  font-size: 15px;
   color: #444;
 }
 
 .copy-button {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 10px;
+  right: 10px;
   background: #007bff;
   color: white;
   border: none;
-  padding: 6px 12px;
+  padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 13px;
-  transition: background 0.3s;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .copy-button:hover {
   background: #0056b3;
+  transform: scale(1.05);
 }
 
 ul {
@@ -97,7 +97,7 @@ ul {
 }
 
 ul li {
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 ul li a {
@@ -109,6 +109,7 @@ ul li a {
 
 ul li a:hover {
   text-decoration: underline;
+  color: #0056b3; /* Darker color on hover */
 }
 
 @media (max-width: 600px) {
@@ -117,7 +118,7 @@ ul li a:hover {
   }
 
   .container {
-    padding: 15px;
+    padding: 20px;
   }
 
   pre {
@@ -130,11 +131,10 @@ ul li a:hover {
   }
 
   .copy-button {
-    font-size: 11px;
-    padding: 4px 8px;
+    font-size: 12px;
+    padding: 6px 10px;
   }
 }
-
   </style>
 </head>
 <body>
