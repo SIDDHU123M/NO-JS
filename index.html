@@ -18,12 +18,11 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      text-align: center;
     }
 
     .container {
       max-width: 800px;
-      margin: 20px;
+      width: 90%;
       padding: 30px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 15px;
@@ -36,22 +35,8 @@
       margin-bottom: 20px;
       font-size: 2.5rem;
       color: #fff;
+      text-align: center;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    }
-
-    h2 {
-      margin-top: 25px;
-      margin-bottom: 15px;
-      font-size: 1.75rem;
-      color: #f1f1f1;
-      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    p {
-      margin: 10px 0;
-      line-height: 1.8;
-      font-size: 16px;
-      color: #e0e0e0;
     }
 
     .output {
@@ -65,7 +50,7 @@
     }
 
     pre {
-      background: rgba(244, 244, 249, 0.8);
+      background: rgba(244, 244, 249, 0.9);
       padding: 15px;
       border-radius: 8px;
       overflow-x: auto;
@@ -74,40 +59,30 @@
       color: #333;
       border: 1px solid rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
+      position: relative;
     }
 
     .copy-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
       background: #007bff;
       color: white;
       border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 8px 12px;
+      border-radius: 4px;
       cursor: pointer;
       font-size: 14px;
-      transition: background 0.3s, transform 0.2s;
+      transition: background 0.3s;
     }
 
     .copy-button:hover {
       background: #0056b3;
-      transform: scale(1.05);
     }
 
     @media (max-width: 600px) {
-      .container {
-        padding: 15px;
-      }
-
       h1 {
         font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      .copy-button {
-        font-size: 12px;
-        padding: 8px 12px;
       }
     }
   </style>
@@ -146,12 +121,11 @@
           }, 2000);
         });
       });
-      block.parentElement.style.position = 'relative';
-      block.parentElement.appendChild(button);
+      block.appendChild(button);
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-      fetchMarkdown('NOJS.md'); // Replace with the path to your Markdown file
+      fetchMarkdown('NOJS.md'); // Ensure the path to your Markdown file is correct
     });
   </script>
 </body>
